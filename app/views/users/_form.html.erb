@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-md-offset-2 col-md-4">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %> <!-- ここを追加 -->
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label "ログインパスワード" %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label :password_confirmation, "もう一度入力してください" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+  </div>
+  <div class="col-md-4">
+      <%= f.label "お住いの地域" %>
+      <select multiple class="form-control">
+        <option>北海道</option>
+        <option>東北</option>
+        <option>関東</option>
+        <option>中部</option>
+        <option>近畿</option>
+        <option>中国</option>
+        <option>四国</option>
+        <option>九州</option>
+      </select>
+      
+       <%= f.label "自己紹介" %>
+       <textarea class="form-control" rows="5"></textarea></li>
+
+      <%= f.submit "新規登録", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

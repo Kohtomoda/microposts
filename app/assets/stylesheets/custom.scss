@@ -5,6 +5,8 @@
 
 body {
   padding-top: 60px;
+  background:#f5fffa;
+  padding-bottom:100px;
 }
 
 section {
@@ -87,4 +89,30 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+}
+
+#profile-erea{
+  text-align:center;
+}
+
+.user-prof{
+  text-align:left;
+  padding: 40px 20px 40px;
+  border:1px solid #333;
+  background:#fff;
+}
+
+ul.prof-list{
+  list-style:none;
+  margin:0 auto;
+}
+
+ul.prof-list li{
+  margin: 0 0 20px 0;
+}
+
+.user-img{
+  font-size:30px;
+  text-align:center;
+  margin-bottom:20px;
 }

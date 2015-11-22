@@ -2,11 +2,12 @@
 <html>
 <head>
   <title>Microposts</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<<<<<<< HEAD
   <%= render 'layouts/header' %>
   
 <div class="container">
@@ -22,5 +23,14 @@
 </div>
 
 
+=======
+ <%= render 'layouts/header' %>
+  <div class="container">
+    <% flash.each do |message_type, message| %> <!-- ここから -->
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %> <!-- ここまで追加 -->
+    <%= yield %>
+  </div>
+>>>>>>> a661331afef07f5648fa776e6f0840618cd65df0
 </body>
 </html>

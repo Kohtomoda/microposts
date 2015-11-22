@@ -12,8 +12,11 @@
       <ul class="prof-list">
           <li>ユーザー名：<%= @user.name %></li>
           <li>メールアドレス：<%= @user.email %></li>
-          <li>住んでいる地域：</li>
+          <li>住んでいる地域：<%= @user.area %></li>
+          <li>住んでいる地域：<%= @user.intro %></li>
+          <li><%= link_to "プロフィールの編集", edit_user_path %></li>
       </ul>
-      <p style="text-align:center;"><%= link_to "プロフィールを編集する" , edit_user_path %></p>
+      <p style="text-align:center;">
+
  </div>
 </div>

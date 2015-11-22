@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
   def new
   end
-<<<<<<< HEAD
 
   def create
     @user = User.find_by(email: params[:session][:email].downcase)
@@ -21,6 +20,3 @@ class SessionsController < ApplicationController
   end
 end
 
-=======
-end
->>>>>>> a661331afef07f5648fa776e6f0840618cd65df0

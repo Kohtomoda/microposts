@@ -1,22 +1,22 @@
 <h1>ユーザー情報 </h1>
 
-
-
 <div class="row">
     
-    <div class="col-md-12 user-img">
-        <%= gravatar_for @user %>
-    </div>
+    <aside class="col-md-4">
+        <section class="user_info" >
+            <h1>
+                <%= gravatar_for @user %>
+                <%= @user.name %>
+            </h1>
+        </section>
+    </aside>
     
-  <div class="col-md-6 col-md-offset-3 user-prof">
-      <ul class="prof-list">
-          <li>ユーザー名：<%= @user.name %></li>
-          <li>メールアドレス：<%= @user.email %></li>
-          <li>住んでいる地域：<%= @user.area %></li>
-          <li>住んでいる地域：<%= @user.intro %></li>
-          <li><%= link_to "プロフィールの編集", edit_user_path %></li>
-      </ul>
-      <p style="text-align:center;">
-
+  <div class="col-md-8">
+      <% if @user.microposts.any? %>
+      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+          <%= render @microposts %>
+      </ol>
+      <% end %>
  </div>
 </div>

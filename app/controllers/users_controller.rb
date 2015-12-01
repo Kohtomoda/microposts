@@ -20,6 +20,16 @@ class UsersController < ApplicationController
   @microposts = @user.microposts
   end
   
+  def following
+  @user =  User.find(params[:id])
+  @following_users = @user.following_users
+  end
+  
+  def follower
+  @user = User.find(params[:id])
+  @follower_users = @user.follower_users
+  end
+  
   def new
     @user = User.new
   end
@@ -52,4 +62,7 @@ def correct_user
   redirect_to(root_url) unless @user == current_user
 end
 
+
+
 end
+

@@ -16,7 +16,7 @@
     <% @follower_users.each do |user| %>
       
         <div class="profile-card">
-                <span class="follower-img"><%= gravatar_for(@user, size:180) %></span>
+                <span class="follower-img"><%= gravatar_for(user, size:180) %></span>
                 <span class="follower-name"><%= link_to user.name, user %></span>
                 
         </div>
